@@ -1,0 +1,21 @@
+{
+  "name": "Arruda Chudzy Advogadas",
+  "short_name": "Arruda Chudzy",
+  "description": "Advocacia especializada em Direito Médico, Contratos e Direito Criminal. OAB/SC 12.228.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#25071B",
+  "theme_color": "#65194B",
+  "icons": [
+    {
+      "src": "assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "assets/images/logo.jpg",
+      "sizes": "100x100",
+      "type": "image/jpeg"
+    }
+  ]
+}

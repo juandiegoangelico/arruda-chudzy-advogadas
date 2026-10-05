@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Arruda Chudzy Monograma">
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#742356"/>
+      <stop offset="100%" stop-color="#65194B"/>
+    </linearGradient>
+    <linearGradient id="goldRose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8F2F5"/>
+      <stop offset="50%" stop-color="#E8D3DF"/>
+      <stop offset="100%" stop-color="#C9A0B8"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="24" fill="url(#brandGrad)"/>
+  <rect x="3" y="3" width="114" height="114" rx="21" fill="none" stroke="#C9A0B8" stroke-width="1" stroke-opacity="0.35"/>
+  <!-- Stylized interlocking AC monogram -->
+  <g transform="translate(18, 16)" fill="url(#goldRose)">
+    <text x="20" y="68" font-family="'Cinzel', 'Playfair Display', 'Cormorant Garamond', 'Baskerville', serif" font-size="62" font-weight="400" letter-spacing="-4" text-anchor="middle">A</text>
+    <text x="54" y="72" font-family="'Cinzel', 'Playfair Display', 'Cormorant Garamond', 'Baskerville', serif" font-size="62" font-weight="300" letter-spacing="-2" text-anchor="middle" opacity="0.95">C</text>
+  </g>
+</svg>
