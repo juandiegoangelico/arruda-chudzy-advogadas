@@ -77,9 +77,6 @@ A paleta de cores e tipografia foram especialmente concebidas para transmitir el
 ├── sitemap.xml                  # Mapa XML do site
 ├── README.md                    # Documentação do projeto
 ├── .gitignore                   # Arquivos ignorados pelo Git
-├── .github/
-│   └── workflows/
-│       └── pages.yml            # Pipeline de deploy automático no GitHub Pages
 └── assets/
     ├── css/
     │   ├── style.css            # Estilos globais, grid, tipografia, paleta
@@ -88,17 +85,25 @@ A paleta de cores e tipografia foram especialmente concebidas para transmitir el
     │   ├── main.js              # Menu mobile, scrollspy, encolhimento de header, contato
     │   └── gallery.js           # Galeria dinâmica de eventos, modal <dialog> com light-dismiss
     └── images/
-        ├── julia-arruda.jpg     # Fotografia profissional da Dra. Julia Arruda
-        ├── bianca-chudzy.jpg    # Fotografia profissional da Dra. Bianca Chudzy
-        ├── logo-monogram.svg    # Monograma vetorial AC oficial
-        ├── logo-full.svg        # Logomarca vetorial completa
-        ├── favicon.svg          # Ícone de navegador
-        ├── hero-advocacia-saude.jpg # Imagem editorial boutique de abertura
-        ├── office-consultation.jpg  # Sala de atendimento personalizado
-        ├── events-lecture.jpg   # Palestras e eventos acadêmicos/jurídicos
-        ├── contracts-desk.jpg   # Mesa executiva e instrumentos contratuais
-        ├── logo.jpg             # Badge institucional
-        └── og-preview.jpg       # Imagem Open Graph para WhatsApp e redes sociais
+        ├── julia-arruda.jpg                 # Fotografia profissional da Dra. Julia Arruda
+        ├── bianca-chudzy.jpg                # Fotografia profissional da Dra. Bianca Chudzy
+        ├── logo-monogram.svg                # Monograma vetorial AC oficial
+        ├── logo-full.svg                    # Logomarca vetorial completa
+        ├── favicon.svg                      # Ícone de navegador
+        ├── logo.jpg                         # Badge institucional
+        ├── hero-socias-recepcao.jpg         # Sócias na recepção com logotipo AC (IMG_3295)
+        ├── sobre-socias-mesa.jpg            # Sócias na mesa de reuniões (IMG_3305)
+        ├── escritorio-lages-vista.jpg       # Sócias com vista para a Catedral de Lages (IMG_3297)
+        ├── atendimento-detalhe-macbook.jpg  # Detalhe mesa de trabalho e laptop AC (IMG_2873)
+        ├── atendimento-hospitalidade.jpg    # Acolhimento e café boutique (IMG_2875)
+        ├── socias-estudio-elegancia.jpg     # Retrato em estúdio em tons claros (IMG_3282)
+        ├── socias-estudio-vinho.jpg         # Retrato em estúdio em tons vinho (IMG_3288)
+        ├── socias-movimento-recepcao.jpg    # Movimento editorial na recepção (IMG_3294)
+        ├── socias-reuniao-tablet.jpg        # Alinhamento estratégico no tablet (IMG_3298)
+        ├── socias-estudio-confianca.jpg     # Retrato corporativo sócias (IMG_3290)
+        ├── socias-estudio-preto.jpg         # Retrato estúdio preto (IMG_3279)
+        ├── og-preview.jpg                   # Imagem social 1200x630 para WhatsApp e redes
+        └── img_*.jpg                        # Arquivos fotográficos originais otimizados (IMG_2873 a IMG_3307)
 ```
 
 ---

@@ -15,7 +15,7 @@ const EVENTS_DATA = [
     categoryLabel: 'Palestra',
     title: 'Summit Saúde: Secretárias 360º — Treinamento Jurídico',
     date: 'Florianópolis / SC',
-    image: 'assets/images/events-lecture.jpg',
+    image: 'assets/images/socias-estudio-elegancia.jpg',
     excerpt: 'Treinamento jurídico intensivo para equipes de atendimento e secretárias em clínicas e consultórios médicos, minimizando riscos civis e éticos.',
     fullDescription: 'Participação de destaque no Summit Saúde apresentando a palestra "Secretárias 360º — treinamento jurídico para a equipe que atende o paciente". Foco na primeira linha de acolhimento e proteção de clínicas, conformidade com a LGPD em dados sensíveis de saúde, gestão de prontuários e prevenção estratégica de reclamações ético-profissionais perante o CRM.'
   },
@@ -25,7 +25,7 @@ const EVENTS_DATA = [
     categoryLabel: 'Curso / Workshop',
     title: 'Workshop de Compliance Médico e Validade do TCLE',
     date: 'Lages / SC',
-    image: 'assets/images/contracts-desk.jpg',
+    image: 'assets/images/atendimento-detalhe-macbook.jpg',
     excerpt: 'Elaboração e implementação prática do Termo de Consentimento Livre e Esclarecido (TCLE) personalizado para procedimentos invasivos e cirúrgicos.',
     fullDescription: 'Workshop exclusivo direcionado a cirurgiões, dermatologistas e gestores de clínicas. Abordou as mais recentes teses do Superior Tribunal de Justiça (STJ) sobre o dever de informação, a insuficiência de termos genéricos padronizados e as melhores práticas na personalização do TCLE para respaldar a prática médica e evitar indenizações.'
   },
@@ -35,7 +35,7 @@ const EVENTS_DATA = [
     categoryLabel: 'Publicação Especializada',
     title: 'Guia de Contratos Médicos e Sociedades em Saúde',
     date: 'Artigo & E-book Jurídico',
-    image: 'assets/images/office-consultation.jpg',
+    image: 'assets/images/escritorio-lages-vista.jpg',
     excerpt: 'Análise minuciosa das cláusulas essenciais em contratos de prestação de serviços médicos, locação de consultórios e acordos de sócios.',
     fullDescription: 'Publicação técnica de autoria das sócias detalhando os principais erros contratuais em sociedades de saúde e parcerias médicas. Traz orientações preventivas sobre cláusulas de não concorrência, sigilo profissional, divisão de responsabilidades civis e estratégias para mitigar conflitos societários antes que atinjam esferas judiciais.'
   },
@@ -45,9 +45,29 @@ const EVENTS_DATA = [
     categoryLabel: 'Atuação Institucional',
     title: 'Assessoria Consultiva e Ético-Profissional em Sindicâncias',
     date: 'Atuação Regional',
-    image: 'assets/images/hero-advocacia-saude.jpg',
+    image: 'assets/images/socias-estudio-vinho.jpg',
     excerpt: 'Acompanhamento rigoroso e técnico de sindicâncias e processos ético-disciplinares em conselhos de classe de medicina e áreas afins.',
     fullDescription: 'Atuação especializada e personalizada em todas as fases de sindicâncias e Processos Ético-Profissionais (PEP) perante o Conselho Regional de Medicina. Elaboração de defesas preliminares, acompanhamento em oitivas e recursos no Conselho Federal de Medicina (CFM), resguardando o histórico e o livre exercício da profissão médica com sigilo e excelência técnica.'
+  },
+  {
+    id: 'sede-arruda-chudzy-lages',
+    category: 'institucional',
+    categoryLabel: 'Espaço & Sede',
+    title: 'Sede Própria no Edifício Azteca em Lages – SC',
+    date: 'Edifício Azteca &bull; Sala 712',
+    image: 'assets/images/hero-socias-recepcao.jpg',
+    excerpt: 'Estrutura boutique moderna e acolhedora projetada para atender clientes com discrição, conforto e excelência técnica.',
+    fullDescription: 'Localizado no coração de Lages (Rua Cel. Córdova, 458, Sala 712), o escritório Arruda Chudzy Advogadas dispõe de instalações contemporâneas, salas privativas de conferência e atendimento presencial e virtual de alta segurança para clientes em todo o estado de Santa Catarina.'
+  },
+  {
+    id: 'reuniao-estrategica-tablet',
+    category: 'publicacoes',
+    categoryLabel: 'Artigo Jurídico',
+    title: 'Gestão Preventiva de Riscos em Procedimentos Médicos',
+    date: 'Estudo de Caso & Análise',
+    image: 'assets/images/socias-reuniao-tablet.jpg',
+    excerpt: 'Metodologia exclusiva de auditoria de rotinas clínicas e prevenção contenciosa aplicada a consultórios de alta complexidade.',
+    fullDescription: 'Artigo analítico sobre a importância do mapeamento prévio de vulnerabilidades contratuais e fluxos de atendimento. Demonstra como o alinhamento preventivo entre corpo médico e assessoria jurídica reduz em até 80% as chances de questionamentos judiciais indenizatórios.'
   }
 ];
 
