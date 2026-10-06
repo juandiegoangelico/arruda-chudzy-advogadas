@@ -72,6 +72,7 @@ A paleta de cores e tipografia foram especialmente concebidas para transmitir el
 
 ```text
 ├── index.html                   # Página principal institucional
+├── politica-de-privacidade.html # Política de Privacidade e Proteção de Dados (LGPD)
 ├── manifest.json                # Manifesto PWA com paleta oficial
 ├── robots.txt                   # Diretivas de rastreamento de busca
 ├── sitemap.xml                  # Mapa XML do site
