@@ -24,13 +24,13 @@ A paleta de cores e tipografia foram especialmente concebidas para transmitir el
 
 ## 👩‍⚖️ Nossas Sócias
 
-### Dra. Julia Arruda de Souza
+### Dra. Julia de Arruda Souza
 - **OAB/SC:** 72.463
-- **Perfil:** Advogada com atuação especializada na construção de soluções jurídicas estratégicas nas áreas de Direito Médico e da Saúde, Contratos e Direito Criminal.
+- **Perfil:** Advogada e sócia-fundadora do escritório Arruda Chudzy Advocacia. Presidente da Comissão de Direito da Saúde da OAB Lages (2025–2027), é idealizadora do evento Secretárias 360º, voltado à capacitação de equipes de clínicas de saúde. Pós-graduada em Direito Médico e da Saúde pela PUC-PR e bacharela em Direito pela UNIPLAC, foi criadora da ideia vencedora do SW Health Lages 2024, no Orion Parque.
 
-### Dra. Bianca Chudzy
+### Dra. Bianca Flor Chudzy
 - **OAB/SC:** 71.437
-- **Perfil:** Advogada dedicada à atuação consultiva e contenciosa, oferecendo suporte jurídico qualificado e personalizado para proteção dos interesses de seus clientes.
+- **Perfil:** Advogada e sócia-fundadora do escritório Arruda Chudzy Advocacia. Secretária da Comissão de Direito da Saúde da OAB Lages (2025–2027), é idealizadora do evento Secretárias 360º, voltado à capacitação de secretárias de clínicas da área da saúde. Pós-graduanda em Gestão Tributária pela USP e bacharela em Direito pela Faculdade CESUSC, onde representou o NuPArb em importantes competições nacionais de arbitragem.
 
 ---
 
