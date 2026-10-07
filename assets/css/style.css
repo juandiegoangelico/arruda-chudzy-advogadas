@@ -229,6 +229,27 @@ ul, ol {
   gap: 14px;
 }
 
+.brand-logo-img {
+  height: 44px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  transition: transform var(--transition-fast);
+  display: block;
+}
+
+.brand-logo:hover .brand-logo-img {
+  transform: scale(1.03);
+}
+
+.hero-badge-logo {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 .brand-monogram {
   width: 44px;
   height: 44px;
@@ -1027,6 +1048,112 @@ ul, ol {
   color: var(--color-text-light);
   border-color: var(--color-primary);
   box-shadow: 0 4px 15px rgba(101, 25, 75, 0.2);
+}
+
+/* ==========================================================================
+   COURSES SHOWCASE (CURSO 1 & CURSO 2)
+   ========================================================================== */
+.courses-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.course-showcase-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border-light);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.course-showcase-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-accent);
+}
+
+.course-showcase-media {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  background: #25071B;
+  cursor: pointer;
+}
+
+.course-showcase-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #25071B;
+  transition: transform var(--transition-slow);
+}
+
+.course-showcase-card:hover .course-showcase-media img {
+  transform: scale(1.02);
+}
+
+.course-showcase-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(37, 7, 27, 0.8) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+  pointer-events: none;
+}
+
+.course-badge {
+  background: rgba(37, 7, 27, 0.88);
+  backdrop-filter: blur(8px);
+  color: var(--color-accent-light);
+  border: 1px solid var(--color-accent);
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.course-showcase-body {
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.course-showcase-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.course-showcase-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.event-card-header-clean {
+  padding: 24px 24px 0 24px;
+}
+
+.event-category-badge.static {
+  position: static;
+  display: inline-block;
+  background: rgba(101, 25, 75, 0.08);
+  color: var(--color-primary);
+  border: 1px solid rgba(101, 25, 75, 0.2);
 }
 
 .events-gallery-grid {
@@ -1859,6 +1986,12 @@ dialog.event-modal::backdrop {
   }
   .partners-grid {
     grid-template-columns: 1fr;
+  }
+  .courses-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+  .course-showcase-media {
+    height: 220px;
   }
   .events-gallery-grid {
     grid-template-columns: 1fr;

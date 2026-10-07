@@ -1,73 +1,93 @@
 /**
  * ARRUDA CHUDZY ADVOGADAS - Dynamic Events & Content Gallery
  * Features:
+ * - Visual Showcases for Curso 1 and Curso 2
+ * - Cards sem fotos das advogadas (foco estrito no conteúdo textual e técnico)
  * - Dynamic Category Filtering
- * - Native <dialog> Modal Viewer
- * - Mandatory Light-Dismiss Fallback (Modern Web Guidance)
- * - Extensible Data Architecture for future events, courses, and publications
+ * - Native <dialog> Modal Viewer com Light-Dismiss Fallback
  */
 
-// Events Data Repository
+// Events and Training Programs Repository
 const EVENTS_DATA = [
   {
-    id: 'summit-saude-2026',
-    category: 'palestras',
-    categoryLabel: 'Palestra',
-    title: 'Summit Saúde: Secretárias 360º — Treinamento Jurídico',
-    date: 'Florianópolis / SC',
-    image: 'assets/images/socias-estudio-elegancia.jpg',
-    excerpt: 'Treinamento jurídico intensivo para equipes de atendimento e secretárias em clínicas e consultórios médicos, minimizando riscos civis e éticos.',
-    fullDescription: 'Participação de destaque no Summit Saúde apresentando a palestra "Secretárias 360º — treinamento jurídico para a equipe que atende o paciente". Foco na primeira linha de acolhimento e proteção de clínicas, conformidade com a LGPD em dados sensíveis de saúde, gestão de prontuários e prevenção estratégica de reclamações ético-profissionais perante o CRM.'
-  },
-  {
-    id: 'tcle-compliance-medico',
+    id: 'secretarias-360',
     category: 'cursos',
-    categoryLabel: 'Curso / Workshop',
+    categoryLabel: 'Treinamento Prático',
+    title: 'Treinamento Secretárias 360º',
+    date: 'Para Secretárias, Recepcionistas e Atendimento',
+    image: null,
+    excerpt: 'Capacitação da equipe de atendimento de clínicas e hospitais para atuar de forma estratégica, reduzindo riscos jurídicos e proporcionando uma experiência de excelência ao paciente.',
+    fullDescription: 'PÚBLICO-ALVO:\nSecretárias, recepcionistas e profissionais de atendimento que atuam em clínicas e hospitais.\n\nOBJETIVO:\nCapacitar a equipe para atuar de forma estratégica, reduzindo riscos jurídicos, otimizando processos internos e proporcionando uma experiência de excelência ao paciente.\n\nSOBRE O TREINAMENTO:\nCom uma abordagem prática e completa, o treinamento desenvolve competências essenciais para uma atuação segura, organizada e eficiente, fortalecendo o papel da secretária como peça-chave para o sucesso e blindagem da clínica.'
+  },
+  {
+    id: 'canetinhas',
+    category: 'cursos',
+    categoryLabel: 'Treinamento Especializado',
+    title: 'Treinamento "Canetinhas" — Tratamentos Injetáveis',
+    date: 'Para Médicos Prescritores',
+    image: null,
+    excerpt: 'Segurança jurídica e ética na prescrição de tratamentos injetáveis, com foco nas normas do CFM, elaboração de prescrições, prontuários, TCLE e comunicação.',
+    fullDescription: 'PÚBLICO-ALVO:\nMédicos que prescrevem tratamentos injetáveis e desejam atuar com maior segurança jurídica e ética em sua prática profissional.\n\nOBJETIVO:\nCapacitar os profissionais para prevenir riscos jurídicos, assegurar a conformidade com as normas do CFM e fortalecer a segurança na prescrição, documentação e comunicação com os pacientes.\n\nSOBRE O TREINAMENTO:\nO treinamento apresenta as principais normas do CFM e as orientações dos CRMs aplicáveis à prescrição de tratamentos injetáveis. São abordados aspectos relacionados à adequada elaboração de prescrições, prontuários e TCLE, bem como boas práticas de comunicação com o paciente.'
+  },
+  {
+    id: 'publicidade-medica',
+    category: 'cursos',
+    categoryLabel: 'Publicidade Médica',
+    title: 'Curso de Ética & Publicidade Médica',
+    date: 'Resolução CFM nº 2.336/2023',
+    image: null,
+    excerpt: 'Treinamento prático voltado à aplicação da Resolução CFM nº 2.336/2023, abordando limites e possibilidades da publicidade médica e redes sociais.',
+    fullDescription: 'PÚBLICO-ALVO:\nMédicos, equipes e empresas de marketing que atuam ou prestam serviços para a área da saúde.\n\nOBJETIVO:\nCapacitar os participantes para compreender e aplicar corretamente as disposições do Código de Ética Médica e as regras de publicidade médica.\n\nSOBRE O TREINAMENTO:\nTreinamento prático voltado à interpretação e aplicação do Código de Ética Médica e da Resolução CFM nº 2.336/2023, abordando os limites e possibilidades da publicidade médica, divulgação de serviços, uso das redes sociais e comunicação com pacientes.'
+  },
+  {
+    id: 'estatuto-paciente',
+    category: 'cursos',
+    categoryLabel: 'Legislação em Saúde',
+    title: 'Curso Estatuto do Paciente',
+    date: 'Lei Federal nº 15.378/2026',
+    image: null,
+    excerpt: 'Diretrizes, direitos e garantias fundamentais previstos na Lei nº 15.378/2026 para conduzir atendimentos em total conformidade jurídica.',
+    fullDescription: 'PÚBLICO-ALVO:\nProfissionais da saúde que desejam fortalecer a relação com os pacientes e atuar em conformidade com as normas que regem os direitos dos pacientes.\n\nOBJETIVO:\nCapacitar os participantes para conduzir atendimentos alinhados às disposições da Lei nº 15.378/2026.\n\nSOBRE O TREINAMENTO:\nApresenta os principais direitos, garantias e diretrizes previstos no Estatuto dos Direitos do Paciente, prevenindo conflitos e estabelecendo rotinas assistenciais seguras.'
+  },
+  {
+    id: 'ia-medicina',
+    category: 'cursos',
+    categoryLabel: 'Inovação & CFM',
+    title: 'Treinamento Inteligência Artificial na Medicina',
+    date: 'Resolução CFM nº 2.454/2026',
+    image: null,
+    excerpt: 'Aspectos da Resolução CFM nº 2.454/2026: limites, responsabilidades, deveres e vedações relacionados ao uso de IA na prática médica.',
+    fullDescription: 'PÚBLICO-ALVO:\nMédicos e profissionais da saúde que utilizam ou pretendem utilizar ferramentas de Inteligência Artificial.\n\nOBJETIVO:\nCapacitar os participantes para utilizar recursos de Inteligência Artificial em conformidade com a Resolução CFM nº 2.454/2026.\n\nSOBRE O TREINAMENTO:\nApresenta os principais aspectos da Resolução CFM nº 2.454/2026, abordando limites, responsabilidades, deveres e vedações relacionados ao uso da Inteligência Artificial na medicina e na assistência à saúde.'
+  },
+  {
+    id: 'telemedicina',
+    category: 'cursos',
+    categoryLabel: 'Telemedicina',
+    title: 'Treinamento Telemedicina',
+    date: 'Resolução CFM nº 2.314/2022',
+    image: null,
+    excerpt: 'Requisitos legais para atendimentos remotos: documentação, termos de consentimento, segurança da informação e responsabilidade médica.',
+    fullDescription: 'PÚBLICO-ALVO:\nMédicos e profissionais da saúde que realizam ou pretendem realizar atendimentos por telemedicina.\n\nOBJETIVO:\nCapacitar os participantes para conduzir consultas e acompanhamentos remotos em conformidade com a Resolução CFM nº 2.314/2022, reduzindo riscos éticos e jurídicos.\n\nSOBRE O TREINAMENTO:\nAborda os principais requisitos para a prática da telemedicina, incluindo documentação, consentimento, documentos digitais e responsabilidade, proporcionando maior segurança jurídica na prestação de serviços de saúde a distância.'
+  },
+  {
+    id: 'compliance-tcle',
+    category: 'cursos',
+    categoryLabel: 'Compliance & Gestão',
     title: 'Workshop de Compliance Médico e Validade do TCLE',
-    date: 'Lages / SC',
-    image: 'assets/images/atendimento-detalhe-macbook.jpg',
-    excerpt: 'Elaboração e implementação prática do Termo de Consentimento Livre e Esclarecido (TCLE) personalizado para procedimentos invasivos e cirúrgicos.',
-    fullDescription: 'Workshop exclusivo direcionado a cirurgiões, dermatologistas e gestores de clínicas. Abordou as mais recentes teses do Superior Tribunal de Justiça (STJ) sobre o dever de informação, a insuficiência de termos genéricos padronizados e as melhores práticas na personalização do TCLE para respaldar a prática médica e evitar indenizações.'
+    date: 'Prontuários & Gestão de Riscos',
+    image: null,
+    excerpt: 'Elaboração e implementação prática de Termos de Consentimento (TCLE) personalizados e conformidade à LGPD na rotina de clínicas.',
+    fullDescription: 'Elaboração e implementação prática do Termo de Consentimento Livre e Esclarecido (TCLE) personalizado para procedimentos invasivos e cirúrgicos. Aborda as teses do STJ sobre suficiência de informação e estruturação de prontuários médicos seguros.'
   },
   {
-    id: 'blindagem-contratual-clinicas',
-    category: 'publicacoes',
-    categoryLabel: 'Publicação Especializada',
-    title: 'Guia de Contratos Médicos e Sociedades em Saúde',
-    date: 'Artigo & E-book Jurídico',
-    image: 'assets/images/escritorio-lages-vista.jpg',
-    excerpt: 'Análise minuciosa das cláusulas essenciais em contratos de prestação de serviços médicos, locação de consultórios e acordos de sócios.',
-    fullDescription: 'Publicação técnica de autoria das sócias detalhando os principais erros contratuais em sociedades de saúde e parcerias médicas. Traz orientações preventivas sobre cláusulas de não concorrência, sigilo profissional, divisão de responsabilidades civis e estratégias para mitigar conflitos societários antes que atinjam esferas judiciais.'
-  },
-  {
-    id: 'defesa-etica-crm',
-    category: 'institucional',
-    categoryLabel: 'Atuação Institucional',
-    title: 'Assessoria Consultiva e Ético-Profissional em Sindicâncias',
-    date: 'Atuação Regional',
-    image: 'assets/images/socias-estudio-vinho.jpg',
-    excerpt: 'Acompanhamento rigoroso e técnico de sindicâncias e processos ético-disciplinares em conselhos de classe de medicina e áreas afins.',
-    fullDescription: 'Atuação especializada e personalizada em todas as fases de sindicâncias e Processos Ético-Profissionais (PEP) perante o Conselho Regional de Medicina. Elaboração de defesas preliminares, acompanhamento em oitivas e recursos no Conselho Federal de Medicina (CFM), resguardando o histórico e o livre exercício da profissão médica com sigilo e excelência técnica.'
-  },
-  {
-    id: 'sede-arruda-chudzy-lages',
-    category: 'institucional',
-    categoryLabel: 'Espaço & Sede',
-    title: 'Sede Própria no Edifício Azteca em Lages – SC',
-    date: 'Edifício Azteca &bull; Sala 712',
-    image: 'assets/images/hero-socias-recepcao.jpg',
-    excerpt: 'Estrutura boutique moderna e acolhedora projetada para atender clientes com discrição, conforto e excelência técnica.',
-    fullDescription: 'Localizado no coração de Lages (Rua Cel. Córdova, 458, Sala 712), o escritório Arruda Chudzy Advogadas dispõe de instalações contemporâneas, salas privativas de conferência e atendimento presencial e virtual de alta segurança para clientes em todo o estado de Santa Catarina.'
-  },
-  {
-    id: 'reuniao-estrategica-tablet',
-    category: 'publicacoes',
-    categoryLabel: 'Artigo Jurídico',
-    title: 'Gestão Preventiva de Riscos em Procedimentos Médicos',
-    date: 'Estudo de Caso & Análise',
-    image: 'assets/images/socias-reuniao-tablet.jpg',
-    excerpt: 'Metodologia exclusiva de auditoria de rotinas clínicas e prevenção contenciosa aplicada a consultórios de alta complexidade.',
-    fullDescription: 'Artigo analítico sobre a importância do mapeamento prévio de vulnerabilidades contratuais e fluxos de atendimento. Demonstra como o alinhamento preventivo entre corpo médico e assessoria jurídica reduz em até 80% as chances de questionamentos judiciais indenizatórios.'
+    id: 'sindicancias-crm',
+    category: 'cursos',
+    categoryLabel: 'Defesa Ética',
+    title: 'Assessoria em Sindicâncias e Processos Éticos no CRM',
+    date: 'Conselhos Profissionais & CFM',
+    image: null,
+    excerpt: 'Atuação estratégica em sindicâncias e processos ético-disciplinares em conselhos de classe da medicina e áreas afins.',
+    fullDescription: 'Acompanhamento rigoroso em todas as fases de sindicâncias e Processos Ético-Profissionais (PEP) perante o CRM e CFM. Defesas preliminares, oitivas e recursos com total confidencialidade e técnica jurídica apurada.'
   }
 ];
 
@@ -96,11 +116,23 @@ function initEventsGallery() {
       const card = document.createElement('article');
       card.className = 'event-card reveal is-visible';
       card.setAttribute('data-category', item.category);
+
+      // Render image if present (Course 1 or Course 2), otherwise render clean text header (no lawyer photos)
+      const visualHeader = item.image
+        ? `
+          <div class="event-thumb-wrap">
+            <img src="${item.image}" alt="${item.title}" loading="lazy" width="600" height="340">
+            <span class="event-category-badge">${item.categoryLabel}</span>
+          </div>
+        `
+        : `
+          <div class="event-card-header-clean">
+            <span class="event-category-badge static">${item.categoryLabel}</span>
+          </div>
+        `;
+
       card.innerHTML = `
-        <div class="event-thumb-wrap">
-          <img src="${item.image}" alt="${item.title}" loading="lazy" width="600" height="340">
-          <span class="event-category-badge">${item.categoryLabel}</span>
-        </div>
+        ${visualHeader}
         <div class="event-body">
           <div class="event-meta-info">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
@@ -110,7 +142,7 @@ function initEventsGallery() {
           <p class="event-description">${item.excerpt}</p>
           <div class="event-card-action">
             <button type="button" class="event-view-details-btn" data-event-id="${item.id}">
-              <span>Conhecer detalhes</span>
+              <span>Ver detalhes do treinamento</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </button>
           </div>
@@ -119,19 +151,19 @@ function initEventsGallery() {
       galleryContainer.appendChild(card);
     });
 
-    // Add future event card placeholder for ongoing scalability
+    // Add in-company consultation card
     const placeholderCard = document.createElement('div');
     placeholderCard.className = 'event-card-add-future reveal is-visible';
     placeholderCard.innerHTML = `
       <div class="future-icon">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"></path></svg>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
       </div>
-      <h4 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--color-primary-dark); margin-bottom: 8px;">Novas Edições em Breve</h4>
+      <h4 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--color-primary-dark); margin-bottom: 8px;">Treinamento In Company</h4>
       <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 18px;">
-        Acompanhe nossos próximos eventos, treinamentos in company para equipes de saúde e artigos em primeira mão.
+        Capacitações personalizadas e exclusivas para o corpo clínico e equipe de sua clínica, hospital ou empresa de saúde.
       </p>
-      <a href="https://www.instagram.com/arrudachudzy/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 10px 22px; font-size: 0.86rem; color: var(--color-primary-dark); border-color: var(--color-primary);">
-        Seguir no Instagram
+      <a href="https://wa.me/5549999370099?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20treinamento%20in%20company%20para%20minha%20cl%C3%ADnica." target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.86rem; background: var(--color-primary); color: #fff;">
+        Solicitar Proposta
       </a>
     `;
     galleryContainer.appendChild(placeholderCard);
@@ -171,14 +203,10 @@ function initEventModal() {
     closeBtn.addEventListener('click', () => dialog.close());
   }
 
-  // MANDATORY: Light-Dismiss Fallback from Modern Web Guidance
-  // For browsers that do not yet support closedBy, check if click occurred outside content box
+  // Light-Dismiss Fallback
   if (!('closedBy' in HTMLDialogElement.prototype)) {
     dialog.addEventListener('click', (event) => {
-      // 1. When clicking backdrop, target is the dialog element itself
       if (event.target !== dialog) return;
-
-      // 2. Check if click coordinates fall within dialog's content box
       const rect = dialog.getBoundingClientRect();
       const isDialogContent = (
         rect.top <= event.clientY &&
@@ -186,10 +214,7 @@ function initEventModal() {
         rect.left <= event.clientX &&
         event.clientX <= rect.left + rect.width
       );
-
       if (isDialogContent) return;
-
-      // 3. Click was outside content area (on backdrop), close dialog
       dialog.close();
     });
   }
@@ -209,22 +234,60 @@ function openEventModal(eventId) {
   const dateEl = dialog.querySelector('.modal-event-date');
   const descEl = dialog.querySelector('.modal-event-desc');
 
-  if (imgEl) imgEl.src = eventItem.image;
+  if (imgEl) {
+    if (eventItem.image) {
+      imgEl.src = eventItem.image;
+      imgEl.style.display = 'block';
+    } else {
+      imgEl.style.display = 'none';
+    }
+  }
+
   if (catEl) catEl.textContent = eventItem.categoryLabel;
   if (titleEl) titleEl.textContent = eventItem.title;
   if (dateEl) dateEl.textContent = eventItem.date;
-  if (descEl) descEl.textContent = eventItem.fullDescription;
+  if (descEl) {
+    // Preserve linebreaks
+    descEl.innerText = eventItem.fullDescription;
+  }
 
   if (typeof dialog.showModal === 'function') {
     dialog.showModal();
   }
 }
 
-// Global hook for adding events dynamically in future modules
-window.ArrudaEvents = {
-  data: EVENTS_DATA,
-  addEvent: function(item) {
-    EVENTS_DATA.push(item);
-    initEventsGallery();
+// Global modal trigger for Curso 1 and Curso 2 image viewing
+window.openCourseViewer = function(courseNumber) {
+  const dialog = document.getElementById('eventDetailsModal');
+  if (!dialog) return;
+
+  const imgEl = dialog.querySelector('.modal-header-image');
+  const catEl = dialog.querySelector('.modal-category-tag');
+  const titleEl = dialog.querySelector('.modal-event-title');
+  const dateEl = dialog.querySelector('.modal-event-date');
+  const descEl = dialog.querySelector('.modal-event-desc');
+
+  if (courseNumber === 1) {
+    if (imgEl) {
+      imgEl.src = 'assets/images/curso-1.jpg';
+      imgEl.style.display = 'block';
+    }
+    if (catEl) catEl.textContent = 'Cursos & Treinamentos';
+    if (titleEl) titleEl.textContent = 'Cursos & Treinamentos (Direito Médico e da Saúde) — Módulo I';
+    if (dateEl) dateEl.textContent = 'Secretárias 360º • Treinamento "Canetinhas" • Ética & Publicidade Médica';
+    if (descEl) descEl.innerText = 'Programa de capacitação prática contemplando:\n\n1. Treinamento Secretárias 360º: Preparação completa da equipe de atendimento para redução de riscos jurídicos.\n2. Treinamento "Canetinhas": Prescrição de tratamentos injetáveis com segurança ética e conformidade às resoluções do CFM.\n3. Curso de Ética & Publicidade Médica: Aplicação prática da Resolução CFM nº 2.336/2023 para médicos e equipes de marketing.';
+  } else {
+    if (imgEl) {
+      imgEl.src = 'assets/images/curso-2.jpg';
+      imgEl.style.display = 'block';
+    }
+    if (catEl) catEl.textContent = 'Cursos & Treinamentos';
+    if (titleEl) titleEl.textContent = 'Cursos & Treinamentos (Direito Médico e da Saúde) — Módulo II';
+    if (dateEl) dateEl.textContent = 'Estatuto do Paciente • Inteligência Artificial • Telemedicina';
+    if (descEl) descEl.innerText = 'Programa de capacitação contemporâneo contemplando:\n\n1. Curso Estatuto do Paciente: Alinhamento às disposições da Lei Federal nº 15.378/2026.\n2. Treinamento Inteligência Artificial: Diretrizes da Resolução CFM nº 2.454/2026 para uso de IA na medicina.\n3. Treinamento Telemedicina: Requisitos da Resolução CFM nº 2.314/2022 para consultas a distância com total segurança jurídica.';
+  }
+
+  if (typeof dialog.showModal === 'function') {
+    dialog.showModal();
   }
 };
