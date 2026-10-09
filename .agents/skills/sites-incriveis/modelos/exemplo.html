@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sites Incríveis — página de demonstração</title>
+<!--
+  Demonstração dos efeitos do motor, com conteúdo fictício de exemplo.
+  NÃO é um modelo de layout: cada build real nasce da entrevista.
+-->
+<link rel="stylesheet" href="../motor/sites-incriveis.css">
+<style>
+  :root {
+    --fundo: #F3F1EC;
+    --tinta: #191713;
+    --tinta-suave: #6B675E;
+    --acento: #C2481B;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--tinta);
+    font-family: system-ui, sans-serif;
+    line-height: 1.6;
+  }
+  section { padding: 12vh 8vw; }
+  h1, h2 { line-height: 1.05; margin: 0 0 0.4em; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(40px, 7vw, 92px); }
+  h2 { font-size: clamp(28px, 4vw, 52px); }
+  p  { max-width: 62ch; }
+  .suave { color: var(--tinta-suave); }
+  .rotulo {
+    font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--acento); font-weight: 600;
+  }
+  .numeros { display: flex; gap: 8vw; flex-wrap: wrap; margin-top: 40px; }
+  .numeros strong { display: block; font-size: clamp(36px, 5vw, 64px); }
+  .cartao {
+    flex: 0 0 62vw; max-width: 480px; margin-right: 32px;
+    background: #fff; color: var(--tinta); border-radius: 14px; padding: 32px;
+    box-shadow: 0 2px 14px rgba(20, 18, 14, 0.08);
+  }
+  .cartao .suave { color: var(--tinta-suave); }
+  .palco-conteudo { text-align: center; padding: 0 8vw; }
+  .fim { text-align: center; padding: 20vh 8vw; }
+  .botao {
+    display: inline-block; background: var(--acento); color: #fff;
+    padding: 14px 32px; border-radius: 999px; text-decoration: none;
+    font-weight: 600; margin-top: 24px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Cena 1 · abertura: título que se monta + digitação -->
+<section data-fx-fundo="#F3F1EC" data-fx-tinta="#191713" style="padding-top:22vh">
+  <p class="rotulo" data-fx="surgir">demonstração do motor</p>
+  <h1 data-fx="palavras">A rolagem vira a linha do tempo.</h1>
+  <p class="suave" data-fx="digitar" data-fx-atraso="600">Role devagar. Cada efeito desta página é um atributo no HTML.</p>
+</section>
+
+<!-- Cena 2 · números que sobem -->
+<section>
+  <h2 data-fx="subir">Números contam sozinhos</h2>
+  <p class="suave" data-fx="surgir">Sempre com dados reais — o motor só formata e anima.</p>
+  <div class="numeros">
+    <div data-fx="surgir"><strong data-fx="contar" data-fx-fim="1284">0</strong><span class="suave">exemplo A</span></div>
+    <div data-fx="surgir" data-fx-atraso="150"><strong data-fx="contar" data-fx-fim="97" data-fx-sufixo="%">0</strong><span class="suave">exemplo B</span></div>
+    <div data-fx="surgir" data-fx-atraso="300"><strong data-fx="contar" data-fx-fim="4.9" data-fx-decimais="1">0</strong><span class="suave">exemplo C</span></div>
+  </div>
+</section>
+
+<!-- Cena 3 · cena fixa com etapas (fundo escuro) -->
+<section data-fx-fixa data-fx-altura="4" data-fx-etapas="3"
+         data-fx-fundo="#191713" data-fx-tinta="#F3F1EC" style="padding:0">
+  <div class="fx-palco">
+    <div class="palco-conteudo" style="display:grid">
+      <div class="fx-etapa" style="grid-area:1/1"><h2>Etapa um.</h2><p class="suave">A seção fica presa na tela…</p></div>
+      <div class="fx-etapa" style="grid-area:1/1"><h2>Etapa dois.</h2><p class="suave">…enquanto o visitante rola…</p></div>
+      <div class="fx-etapa" style="grid-area:1/1"><h2>Etapa três.</h2><p class="suave">…e controla o ritmo da história.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Cena 4 · trilho horizontal -->
+<section data-fx-fixa data-fx-altura="3" data-fx-fundo="#F3F1EC" data-fx-tinta="#191713" style="padding:0">
+  <div class="fx-palco" style="justify-content:flex-start">
+    <div data-fx="trilho" style="padding-left:8vw">
+      <div class="cartao"><h2>Um</h2><p class="suave">Cartões deslizam de lado com a rolagem vertical.</p></div>
+      <div class="cartao"><h2>Dois</h2><p class="suave">Bom para galerias, etapas e depoimentos.</p></div>
+      <div class="cartao"><h2>Três</h2><p class="suave">No celular, viram lista normal se o movimento estiver reduzido.</p></div>
+      <div class="cartao"><h2>Quatro</h2><p class="suave">Fim do trilho, a página segue.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Cena 5 · interpolação direta + paralaxe -->
+<section style="min-height:70vh">
+  <h2 data-fx="esquerda">Profundidade sem esforço</h2>
+  <p class="suave" data-fx="surgir">O bloco abaixo flutua contra a rolagem (paralaxe). O de dentro reage ao ponteiro.</p>
+  <div data-fx-paralaxe="0.18" style="margin-top:48px">
+    <div data-fx-mouse="14" class="cartao" style="max-width:420px">
+      <p class="rotulo">paralaxe + ponteiro</p>
+      <p>Mexa o mouse por aqui.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Cena 6 · fechamento resolvido -->
+<section class="fim" data-fx-fundo="#191713" data-fx-tinta="#F3F1EC">
+  <h2 data-fx="crescer">Fechamento claro.</h2>
+  <p class="suave" data-fx="surgir">Uma chamada única — a página termina, não esvai.</p>
+  <a class="botao" href="#" data-fx="subir" data-fx-atraso="200">Chamada principal</a>
+</section>
+
+<script src="../motor/sites-incriveis.js" defer></script>
+</body>
+</html>
