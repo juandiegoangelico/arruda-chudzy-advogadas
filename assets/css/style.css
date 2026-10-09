@@ -95,6 +95,13 @@ ul, ol {
   list-style: none;
 }
 
+p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
 /* Accessibility Skip Link */
 .skip-link {
   position: absolute;
@@ -476,6 +483,10 @@ ul, ol {
   color: var(--color-support);
   margin-bottom: 38px;
   max-width: 620px;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .hero-cta-group {
@@ -699,6 +710,10 @@ ul, ol {
   color: var(--color-text-dark);
   margin-bottom: 20px;
   font-weight: 500;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .about-secondary-text {
@@ -706,6 +721,10 @@ ul, ol {
   line-height: 1.75;
   color: var(--color-text-muted);
   margin-bottom: 36px;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .about-highlights-grid {
@@ -853,6 +872,10 @@ ul, ol {
   color: var(--color-text-muted);
   margin-bottom: 24px;
   flex-grow: 1;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .partner-tags {
@@ -973,6 +996,10 @@ ul, ol {
   color: var(--color-support);
   margin-bottom: 24px;
   line-height: 1.6;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .practice-topics-list {
@@ -989,6 +1016,10 @@ ul, ol {
   gap: 12px;
   font-size: 0.92rem;
   color: var(--color-text-light);
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .practice-topic-bullet {
@@ -1142,6 +1173,10 @@ ul, ol {
   color: var(--color-text-muted);
   margin-bottom: 20px;
   flex-grow: 1;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .event-card-header-clean {
@@ -1244,6 +1279,10 @@ ul, ol {
   color: var(--color-text-muted);
   margin-bottom: 20px;
   flex-grow: 1;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .event-card-action {
@@ -1659,6 +1698,10 @@ ul, ol {
   color: var(--color-support);
   margin-bottom: 24px;
   max-width: 320px;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .footer-oab-badge {
@@ -1871,6 +1914,11 @@ dialog.event-modal::backdrop {
   line-height: 1.7;
   color: var(--color-text-muted);
   margin-bottom: 28px;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  white-space: pre-line;
 }
 
 .modal-close-btn {
@@ -2068,6 +2116,10 @@ dialog.event-modal::backdrop {
   font-size: 1rem;
   color: #33202C;
   margin-bottom: 16px;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .privacy-card ul {
