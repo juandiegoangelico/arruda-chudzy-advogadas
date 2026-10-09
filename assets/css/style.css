@@ -463,11 +463,11 @@ ul, ol {
   margin-bottom: 24px;
 }
 
-.hero-title .title-highlight {
-  background: linear-gradient(90deg, #F8F2F5 0%, #E3CAD8 50%, #C9A0B8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.hero-title .title-highlight,
+.hero-title .fx-palavra:nth-of-type(3) {
+  color: #E3CAD8;
   font-style: italic;
+  font-weight: 700;
 }
 
 .hero-subtitle {

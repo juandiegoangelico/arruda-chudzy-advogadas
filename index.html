@@ -36,6 +36,7 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/sites-incriveis.css">
 
   <!-- Schema.org JSON-LD Structured Data for LegalService -->
   <script type="application/ld+json">
@@ -138,45 +139,45 @@
     <!-- =====================================================================
          HERO SECTION
          ===================================================================== -->
-    <section id="inicio" class="hero-section">
+    <section id="inicio" class="hero-section" data-fx-fundo="#180312" data-fx-tinta="#FAF6F8">
       <div class="hero-background-effects" aria-hidden="true">
         <div class="hero-glow-1"></div>
         <div class="hero-glow-2"></div>
       </div>
 
       <div class="container hero-grid">
-        <div class="hero-content-col reveal">
-          <div class="hero-badge">
+        <div class="hero-content-col">
+          <div class="hero-badge" data-fx="surgir" data-fx-duracao="800">
             <img src="assets/images/logo-monogram-oficial.png" alt="AC" class="hero-badge-logo" width="20" height="20">
             <span>Arruda Chudzy Advogadas &bull; OAB/SC 12.228</span>
           </div>
 
-          <h1 class="hero-title">
+          <h1 class="hero-title" data-fx="palavras">
             Segurança Jurídica <span class="title-highlight">Estratégica</span> para Profissionais da Saúde e Empresas
           </h1>
 
-          <p class="hero-subtitle">
+          <p class="hero-subtitle" data-fx="surgir" data-fx-atraso="350">
             Atuação especializada em Direito Médico e da Saúde, Contratos e Direito Criminal, oferecendo assessoria preventiva, consultiva e contenciosa com foco em resultados e proteção jurídica.
           </p>
 
-          <div class="hero-cta-group">
-            <a href="#contato" class="btn btn-primary">
-              <span>Agende um Atendimento</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-
+          <div class="hero-cta-group" data-fx="subir" data-fx-atraso="500">
             <a href="https://wa.me/5549999370099" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" aria-label="Fale pelo WhatsApp com o escritório Arruda Chudzy">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.074-2.127-.521-1.625-.675-2.656-2.34-2.736-2.448-.078-.108-.654-.869-.654-1.657 0-.787.413-1.174.558-1.332.144-.158.315-.198.421-.198.106 0 .211.002.304.006.098.004.229-.037.359.274.135.324.461 1.125.501 1.206.04.081.067.176.014.283-.054.108-.081.176-.161.27-.081.095-.17.211-.243.283-.081.081-.165.17-.071.332.095.162.42.34 1.229 1.42.128.114.244.151.343.19.123.048.243.042.335.028.115-.017.359-.147.501-.365.143-.217.143-.404.101-.485-.042-.081-.144-.131-.288-.202z"/></svg>
-              <span>Fale pelo WhatsApp</span>
+              <span>Atendimento via WhatsApp</span>
+            </a>
+
+            <a href="#atuacao" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.25); color: var(--color-text-light);">
+              <span>Conhecer Atuação</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
           </div>
         </div>
 
-        <div class="hero-media-wrapper reveal reveal-right">
-          <div class="hero-media-frame">
+        <div class="hero-media-wrapper">
+          <div class="hero-media-frame" data-fx-paralaxe="0.12">
             <img src="assets/images/hero-socias-recepcao.jpg" alt="Dra. Bianca Flor Chudzy e Dra. Julia de Arruda Souza no escritório Arruda Chudzy Advogadas" width="640" height="480" fetchpriority="high">
           </div>
-          <div class="hero-floating-card">
+          <div class="hero-floating-card" data-fx-mouse="12">
             <div class="hero-floating-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
             </div>
@@ -192,50 +193,50 @@
     <!-- =====================================================================
          SOBRE O ESCRITÓRIO
          ===================================================================== -->
-    <section class="section" id="sobre">
+    <section class="section" id="sobre" data-fx-fundo="#F6EFF3" data-fx-tinta="#25071B">
       <div class="container about-grid">
-        <div class="about-image-stack reveal reveal-left">
+        <div class="about-image-stack" data-fx="esquerda">
           <div class="about-main-img">
             <img src="assets/images/sobre-socias-mesa.jpg" alt="Dra. Julia de Arruda Souza e Dra. Bianca Flor Chudzy em atendimento no escritório Arruda Chudzy Advogadas" width="580" height="520" loading="lazy">
           </div>
           <div class="about-badge-card">
-            <div class="badge-number">100%</div>
+            <div class="badge-number" data-fx="contar" data-fx-fim="100" data-fx-sufixo="%">0</div>
             <div class="badge-desc">Foco na prevenção de riscos e soluções customizadas para cada cliente</div>
           </div>
         </div>
 
-        <div class="about-content-col reveal">
-          <div class="section-tag">Sobre o Escritório</div>
-          <h2 class="section-title">Excelência Jurídica com Atendimento Personalizado</h2>
+        <div class="about-content-col" data-fx="direita">
+          <div class="section-tag" data-fx="surgir">Sobre o Escritório</div>
+          <h2 class="section-title" data-fx="subir">Excelência Jurídica com Atendimento Personalizado</h2>
 
-          <p class="about-lead-text">
+          <p class="about-lead-text" data-fx="surgir" data-fx-atraso="150">
             O Arruda Chudzy Advogadas é um escritório com atuação estratégica voltada à prevenção de riscos, resolução de conflitos e construção de soluções jurídicas seguras.
           </p>
 
-          <p class="about-secondary-text">
+          <p class="about-secondary-text" data-fx="surgir" data-fx-atraso="250">
             Com atendimento próximo e personalizado, presta assessoria especializada para profissionais da saúde, clínicas, empresas e pessoas físicas, sempre pautado pela ética, transparência e excelência técnica.
           </p>
 
           <div class="about-highlights-grid">
-            <div class="highlight-item">
+            <div class="highlight-item" data-fx="subir" data-fx-atraso="100">
               <span class="highlight-check-icon">&#10004;</span>
               <span class="highlight-text">Atendimento personalizado</span>
             </div>
-            <div class="highlight-item">
+            <div class="highlight-item" data-fx="subir" data-fx-atraso="200">
               <span class="highlight-check-icon">&#10004;</span>
               <span class="highlight-text">Estratégia jurídica preventiva</span>
             </div>
-            <div class="highlight-item">
+            <div class="highlight-item" data-fx="subir" data-fx-atraso="300">
               <span class="highlight-check-icon">&#10004;</span>
               <span class="highlight-text">Atuação consultiva e contenciosa</span>
             </div>
-            <div class="highlight-item">
+            <div class="highlight-item" data-fx="subir" data-fx-atraso="400">
               <span class="highlight-check-icon">&#10004;</span>
               <span class="highlight-text">Compromisso com resultados</span>
             </div>
           </div>
 
-          <a href="#contato" class="btn btn-primary" style="background: var(--color-primary); color: var(--color-text-light);">
+          <a href="https://wa.me/5549999370099" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-fx="subir" data-fx-atraso="500" style="background: var(--color-primary); color: var(--color-text-light);">
             <span>Conheça Nossa Assessoria</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </a>
@@ -246,9 +247,9 @@
     <!-- =====================================================================
          SEÇÃO SÓCIAS
          ===================================================================== -->
-    <section id="socias" class="section section-dark">
+    <section id="socias" class="section section-dark" data-fx-fundo="#25071B" data-fx-tinta="#FAF6F8">
       <div class="container">
-        <div class="section-header reveal">
+        <div class="section-header" data-fx="subir">
           <div class="section-tag">Corpo Jurídico</div>
           <h2 class="section-title">Nossas Sócias</h2>
           <p class="section-subtitle">
@@ -258,7 +259,7 @@
 
         <div class="partners-grid">
           <!-- Card 01: Julia de Arruda Souza -->
-          <article class="partner-card reveal reveal-delay-1">
+          <article class="partner-card" data-fx="esquerda">
             <div class="partner-image-wrapper">
               <img src="assets/images/julia-arruda.jpg" alt="Julia de Arruda Souza - Advogada OAB/SC 72.463" width="682" height="682" loading="lazy">
               <div class="partner-image-overlay"></div>
@@ -286,7 +287,7 @@
           </article>
 
           <!-- Card 02: Bianca Flor Chudzy -->
-          <article class="partner-card reveal reveal-delay-2">
+          <article class="partner-card" data-fx="direita">
             <div class="partner-image-wrapper">
               <img src="assets/images/bianca-chudzy.jpg" alt="Bianca Flor Chudzy - Advogada OAB/SC 71.437" width="682" height="682" loading="lazy">
               <div class="partner-image-overlay"></div>
@@ -319,9 +320,9 @@
     <!-- =====================================================================
          ÁREAS DE ATUAÇÃO
          ===================================================================== -->
-    <section id="atuacao" class="section">
+    <section id="atuacao" class="section" data-fx-fundo="#FAF6F8" data-fx-tinta="#25071B">
       <div class="container">
-        <div class="section-header reveal">
+        <div class="section-header" data-fx="subir">
           <div class="section-tag">Especialidades</div>
           <h2 class="section-title">Áreas de Atuação</h2>
           <p class="section-subtitle">
@@ -331,7 +332,7 @@
 
         <div class="practice-areas-grid">
           <!-- ÁREA 1: DIREITO MÉDICO E DA SAÚDE -->
-          <article class="practice-card reveal reveal-delay-1" style="background: #FFFFFF; color: var(--color-text-dark); border-color: var(--color-border-light);">
+          <article class="practice-card" data-fx="subir" data-fx-atraso="100" style="background: #FFFFFF; color: var(--color-text-dark); border-color: var(--color-border-light);">
             <div class="practice-icon-box" style="background: rgba(101, 25, 75, 0.08); color: var(--color-primary); border-color: rgba(101, 25, 75, 0.2);">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
             </div>
@@ -355,7 +356,7 @@
           </article>
 
           <!-- ÁREA 2: DIREITO CRIMINAL -->
-          <article class="practice-card reveal reveal-delay-2" style="background: #FFFFFF; color: var(--color-text-dark); border-color: var(--color-border-light);">
+          <article class="practice-card" data-fx="subir" data-fx-atraso="250" style="background: #FFFFFF; color: var(--color-text-dark); border-color: var(--color-border-light);">
             <div class="practice-icon-box" style="background: rgba(101, 25, 75, 0.08); color: var(--color-primary); border-color: rgba(101, 25, 75, 0.2);">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
             </div>
@@ -381,7 +382,7 @@
           </article>
 
           <!-- ÁREA 3: CONTRATOS E CONSULTORIA -->
-          <article class="practice-card reveal reveal-delay-3" style="background: #FFFFFF; color: var(--color-text-dark); border-color: var(--color-border-light);">
+          <article class="practice-card" data-fx="subir" data-fx-atraso="400" style="background: #FFFFFF; color: var(--color-text-dark); border-color: var(--color-border-light);">
             <div class="practice-icon-box" style="background: rgba(101, 25, 75, 0.08); color: var(--color-primary); border-color: rgba(101, 25, 75, 0.2);">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
             </div>
@@ -409,9 +410,9 @@
     <!-- =====================================================================
          EVENTOS E CONTEÚDO JURÍDICO
          ===================================================================== -->
-    <section id="eventos" class="section" style="background-color: #F6EFF3;">
+    <section id="eventos" class="section" style="background-color: #F6EFF3;" data-fx-fundo="#F6EFF3" data-fx-tinta="#25071B">
       <div class="container">
-        <div class="section-header reveal">
+        <div class="section-header" data-fx="subir">
           <div class="section-tag">Difusão de Conhecimento</div>
           <h2 class="section-title">Eventos e Conteúdo Jurídico</h2>
           <p class="section-subtitle">
@@ -420,9 +421,9 @@
         </div>
 
         <!-- Destaques Visuais: Curso 1 e Curso 2 -->
-        <div class="courses-showcase-grid reveal">
+        <div class="courses-showcase-grid">
           <!-- Card Curso 1 -->
-          <article class="course-showcase-card">
+          <article class="course-showcase-card" data-fx="esquerda">
             <div class="course-showcase-media" onclick="openCourseViewer(1)" title="Clique para ampliar e ler a programação completa">
               <img src="assets/images/curso-1.jpg" alt="Cursos e Treinamentos em Direito Médico e da Saúde - Módulo 1" width="800" height="414" loading="lazy">
               <div class="course-showcase-overlay">
@@ -444,7 +445,7 @@
           </article>
 
           <!-- Card Curso 2 -->
-          <article class="course-showcase-card">
+          <article class="course-showcase-card" data-fx="direita">
             <div class="course-showcase-media" onclick="openCourseViewer(2)" title="Clique para ampliar e ler a programação completa">
               <img src="assets/images/curso-2.jpg" alt="Cursos e Treinamentos em Direito Médico e da Saúde - Módulo 2" width="800" height="403" loading="lazy">
               <div class="course-showcase-overlay">
@@ -467,7 +468,7 @@
         </div>
 
         <!-- Categorias dinâmicas de filtro -->
-        <div class="events-filter-bar reveal">
+        <div class="events-filter-bar" data-fx="subir" data-fx-atraso="200">
           <button type="button" class="filter-btn active" data-filter="todos">Todos os Treinamentos</button>
           <button type="button" class="filter-btn" data-filter="cursos">Capacitação Prática</button>
         </div>
@@ -482,9 +483,9 @@
     <!-- =====================================================================
          CONTATO & LOCALIZAÇÃO
          ===================================================================== -->
-    <section id="contato" class="section section-dark">
+    <section id="contato" class="section section-dark" data-fx-fundo="#1A0413" data-fx-tinta="#FAF6F8">
       <div class="container">
-        <div class="section-header reveal">
+        <div class="section-header" data-fx="subir">
           <div class="section-tag">Atendimento Exclusivo</div>
           <h2 class="section-title">Fale Conosco</h2>
           <p class="section-subtitle">
@@ -494,7 +495,7 @@
 
         <div class="contact-grid">
           <!-- Coluna 1: Atendimento via WhatsApp -->
-          <div class="contact-info-cards reveal reveal-left">
+          <div class="contact-info-cards" data-fx="esquerda">
             <!-- Card WhatsApp & Destaque -->
             <div class="contact-wa-highlight">
               <h3>Atendimento Ágil via WhatsApp</h3>
@@ -519,7 +520,7 @@
           </div>
 
           <!-- Coluna 2: Endereço & Mapa Integrado -->
-          <div class="contact-info-cards reveal reveal-right">
+          <div class="contact-info-cards" data-fx="direita">
             <!-- Card Endereço -->
             <div class="contact-card-item">
               <div class="contact-icon-box">
@@ -681,5 +682,6 @@
   <!-- Scripts -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/gallery.js"></script>
+  <script src="assets/js/sites-incriveis.js" defer></script>
 </body>
 </html>
