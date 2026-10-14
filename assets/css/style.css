@@ -541,15 +541,16 @@ p {
 }
 
 .btn-whatsapp {
-  background: #25D366;
+  background: #15803D;
   color: #FFFFFF;
-  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+  box-shadow: 0 8px 25px rgba(21, 128, 61, 0.3);
 }
 
 .btn-whatsapp:hover {
-  background: #20BA5A;
+  background: #166534;
+  color: #FFFFFF;
   transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.45);
+  box-shadow: 0 12px 30px rgba(21, 128, 61, 0.45);
 }
 
 .hero-stats-row {
@@ -1807,12 +1808,12 @@ p {
   width: 62px;
   height: 62px;
   border-radius: 50%;
-  background: #25D366;
+  background: #15803D;
   color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.45);
+  box-shadow: 0 8px 30px rgba(21, 128, 61, 0.45);
   z-index: 990;
   transition: all var(--transition-fast);
 }
@@ -1822,14 +1823,15 @@ p {
   position: absolute;
   inset: -4px;
   border-radius: 50%;
-  border: 2px solid #25D366;
+  border: 2px solid #15803D;
   opacity: 0.7;
   animation: waPulseRing 2.2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
 }
 
 .floating-whatsapp-btn:hover {
+  background: #166534;
   transform: scale(1.1);
-  box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
+  box-shadow: 0 12px 35px rgba(21, 128, 61, 0.6);
 }
 
 .floating-whatsapp-tooltip {
@@ -2008,9 +2010,10 @@ dialog.event-modal::backdrop {
     font-size: 2.2rem;
   }
   .nav-menu {
+    display: none;
     position: fixed;
     top: 0;
-    right: -100%;
+    right: 0;
     width: 82%;
     max-width: 380px;
     height: 100vh;
@@ -2020,17 +2023,12 @@ dialog.event-modal::backdrop {
     align-items: flex-start;
     padding: 48px 36px;
     gap: 28px;
-    visibility: hidden;
-    pointer-events: none;
     box-shadow: -15px 0 40px rgba(0, 0, 0, 0.6);
-    transition: right var(--transition-normal), visibility var(--transition-normal);
     z-index: 1000;
     border-left: 1px solid rgba(201, 160, 184, 0.2);
   }
   .nav-menu.is-open {
-    right: 0;
-    visibility: visible;
-    pointer-events: auto;
+    display: flex;
   }
   .menu-toggle {
     display: flex;
