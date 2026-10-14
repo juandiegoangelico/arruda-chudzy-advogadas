@@ -284,7 +284,7 @@ p {
   font-size: 0.68rem;
   letter-spacing: 3.2px;
   font-weight: 500;
-  color: var(--color-accent);
+  color: var(--color-accent-light);
   text-transform: uppercase;
   margin-top: 2px;
 }
@@ -298,7 +298,7 @@ p {
 .nav-link {
   font-size: 0.92rem;
   font-weight: 500;
-  color: var(--color-support);
+  color: #FFFFFF;
   position: relative;
   letter-spacing: 0.5px;
   padding: 6px 0;
@@ -446,7 +446,7 @@ p {
   font-size: 0.82rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--color-accent-light);
+  color: #FFFFFF;
   margin-bottom: 24px;
 }
 
@@ -587,6 +587,15 @@ p {
   box-shadow: 0 25px 60px rgba(10, 2, 7, 0.55);
   border: 1px solid rgba(201, 160, 184, 0.3);
   aspect-ratio: 4 / 3;
+}
+
+.hero-media-frame picture,
+.about-main-img picture,
+.partner-image-wrapper picture,
+.course-showcase-media picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-media-frame img {
@@ -831,10 +840,9 @@ p {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: rgba(37, 7, 27, 0.85);
-  backdrop-filter: blur(8px);
-  color: var(--color-accent-light);
-  border: 1px solid var(--color-accent);
+  background: #25071B;
+  color: #FFFFFF;
+  border: 1px solid rgba(201, 160, 184, 0.4);
   padding: 6px 14px;
   border-radius: var(--radius-full);
   font-size: 0.8rem;
@@ -930,9 +938,8 @@ p {
 }
 
 .practice-card {
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(201, 160, 184, 0.22);
+  background: #FFFFFF;
+  border: 1px solid var(--color-border-light);
   border-radius: var(--radius-lg);
   padding: 40px 32px;
   transition: all var(--transition-normal);
@@ -940,25 +947,14 @@ p {
   flex-direction: column;
   position: relative;
   overflow: hidden;
-}
-
-.practice-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-support) 100%);
-  opacity: 0;
-  transition: opacity var(--transition-fast);
+  box-shadow: var(--shadow-sm);
 }
 
 .practice-card:hover {
   transform: translateY(-8px);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: var(--color-accent);
-  box-shadow: 0 20px 40px rgba(10, 2, 7, 0.4);
+  background: #FFFFFF;
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
 }
 
 .practice-card:hover::before {
@@ -988,14 +984,14 @@ p {
   font-family: var(--font-serif);
   font-size: 1.85rem;
   font-weight: 600;
-  color: var(--color-text-light);
+  color: var(--color-primary-dark);
   line-height: 1.25;
   margin-bottom: 14px;
 }
 
 .practice-summary {
   font-size: 0.95rem;
-  color: var(--color-support);
+  color: var(--color-text-muted);
   margin-bottom: 24px;
   line-height: 1.6;
   text-align: justify;
@@ -1017,7 +1013,7 @@ p {
   align-items: flex-start;
   gap: 12px;
   font-size: 0.92rem;
-  color: var(--color-text-light);
+  color: var(--color-text-dark);
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
@@ -1141,10 +1137,9 @@ p {
 }
 
 .course-badge {
-  background: rgba(37, 7, 27, 0.88);
-  backdrop-filter: blur(8px);
-  color: var(--color-accent-light);
-  border: 1px solid var(--color-accent);
+  background: #25071B;
+  color: #FFFFFF;
+  border: 1px solid rgba(201, 160, 184, 0.4);
   padding: 5px 14px;
   border-radius: var(--radius-full);
   font-size: 0.78rem;
@@ -1747,7 +1742,7 @@ p {
 }
 
 .footer-link-item a {
-  color: var(--color-support);
+  color: #F8F2F5;
   font-size: 0.92rem;
   transition: all var(--transition-fast);
   display: inline-flex;
@@ -1771,11 +1766,11 @@ p {
   align-items: flex-start;
   gap: 12px;
   font-size: 0.92rem;
-  color: var(--color-support);
+  color: #F8F2F5;
 }
 
 .footer-contact-row svg {
-  color: var(--color-accent);
+  color: var(--color-accent-gold);
   flex-shrink: 0;
   margin-top: 3px;
 }
@@ -1930,7 +1925,8 @@ dialog.event-modal::backdrop {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(37, 7, 27, 0.7);
+  border: none;
+  background: #25071B;
   color: #FFFFFF;
   display: flex;
   align-items: center;
@@ -2169,4 +2165,364 @@ dialog.event-modal::backdrop {
   .privacy-card {
     padding: 28px 20px;
   }
+}
+
+
+/* ==========================================================================
+   ANIMATIONS & MOTION ENGINE (CONCATENATED FOR ZERO RENDER BLOCKING)
+   ========================================================================== */
+
+/* ==========================================================================
+   ARRUDA CHUDZY ADVOGADAS - ANIMATIONS & MOTION
+   ========================================================================== */
+
+/* Keyframe Definitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 0.65;
+  }
+}
+
+@keyframes waPulseRing {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Scroll Reveal Classes (Driven by IntersectionObserver) */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.9, 0.3, 1),
+              transform 0.8s cubic-bezier(0.2, 0.9, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 {
+  transition-delay: 0.15s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.3s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.45s;
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-36px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.9, 0.3, 1),
+              transform 0.8s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+.reveal-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(36px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.9, 0.3, 1),
+              transform 0.8s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+.reveal-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Float card animation */
+.hero-floating-card {
+  will-change: transform;
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+/* Scroll-Driven Animations: Shrinking Header (Chrome 115+, Safari 26+) */
+@supports ((animation-timeline: scroll()) and (animation-range: 0% 100%)) {
+  @keyframes shrinkHeaderAnim {
+    from {
+      height: var(--header-height);
+      background-color: rgba(37, 7, 27, 0.72);
+    }
+    to {
+      height: var(--header-height-shrunk);
+      background-color: rgba(37, 7, 27, 0.96);
+      box-shadow: 0 10px 30px rgba(20, 3, 14, 0.45);
+    }
+  }
+
+  .site-header {
+    animation: shrinkHeaderAnim auto linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0px 140px;
+  }
+}
+
+/* Accessibility: Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal,
+  .reveal-left,
+  .reveal-right {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .hero-floating-card {
+    animation: none !important;
+  }
+
+  .floating-whatsapp-btn::before {
+    animation: none !important;
+  }
+}
+
+
+/* ==========================================================================
+   SITES INCRÍVEIS ENGINE STYLES
+   ========================================================================== */
+
+/*!
+ * Sites Incríveis — estilos do motor
+ * © 2026 Enzo Barbatto — Sparo Automações. Uso conforme LICENCA.md.
+ *
+ * Só o necessário para os efeitos funcionarem. A identidade visual do site
+ * (fontes, cores, espaçamentos) vive no CSS da própria página.
+ */
+
+/* ---------- estados iniciais das revelações ---------- */
+
+[data-fx="surgir"],
+[data-fx="subir"],
+[data-fx="esquerda"],
+[data-fx="direita"],
+[data-fx="crescer"] {
+  opacity: 0;
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+[data-fx="subir"]    { transform: translateY(36px); }
+[data-fx="esquerda"] { transform: translateX(-48px); }
+[data-fx="direita"]  { transform: translateX(48px); }
+[data-fx="crescer"]  { transform: scale(0.92); }
+
+[data-fx].fx-em-cena {
+  opacity: 1;
+  transform: none;
+}
+
+/* palavras: cada palavra sobe individualmente quando o pai entra em cena */
+[data-fx="palavras"] .fx-palavra {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.6em);
+  transition: opacity 0.55s ease-out, transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+[data-fx="palavras"].fx-em-cena .fx-palavra {
+  opacity: 1;
+  transform: none;
+}
+[data-fx="palavras"] { opacity: 1; }
+
+/* digitar: cursor enquanto escreve */
+[data-fx="digitar"] { opacity: 1; }
+.fx-digitando::after {
+  content: "";
+  display: inline-block;
+  width: 0.08em;
+  height: 1em;
+  margin-left: 0.06em;
+  background: currentColor;
+  vertical-align: -0.12em;
+  animation: fx-cursor 0.8s steps(2, jump-none) infinite;
+}
+@keyframes fx-cursor { 50% { opacity: 0; } }
+
+[data-fx="contar"] {
+  opacity: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- cenas fixas ---------- */
+
+[data-fx-fixa] {
+  position: relative;
+}
+
+.fx-palco {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-fx="trilho"] {
+  display: flex;
+  flex-wrap: nowrap;
+  will-change: transform;
+}
+
+[data-fx="rolar-video"] {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* etapas: por padrão, cada .fx-etapa aparece na sua vez.
+   A página pode sobrescrever livremente com [data-etapa="n"]. */
+[data-fx-etapas] .fx-etapa {
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+[data-fx-etapas="2"][data-etapa="1"] .fx-etapa:nth-of-type(1),
+[data-fx-etapas="2"][data-etapa="2"] .fx-etapa:nth-of-type(2),
+[data-fx-etapas="3"][data-etapa="1"] .fx-etapa:nth-of-type(1),
+[data-fx-etapas="3"][data-etapa="2"] .fx-etapa:nth-of-type(2),
+[data-fx-etapas="3"][data-etapa="3"] .fx-etapa:nth-of-type(3),
+[data-fx-etapas="4"][data-etapa="1"] .fx-etapa:nth-of-type(1),
+[data-fx-etapas="4"][data-etapa="2"] .fx-etapa:nth-of-type(2),
+[data-fx-etapas="4"][data-etapa="3"] .fx-etapa:nth-of-type(3),
+[data-fx-etapas="4"][data-etapa="4"] .fx-etapa:nth-of-type(4),
+[data-fx-etapas="5"][data-etapa="1"] .fx-etapa:nth-of-type(1),
+[data-fx-etapas="5"][data-etapa="2"] .fx-etapa:nth-of-type(2),
+[data-fx-etapas="5"][data-etapa="3"] .fx-etapa:nth-of-type(3),
+[data-fx-etapas="5"][data-etapa="4"] .fx-etapa:nth-of-type(4),
+[data-fx-etapas="5"][data-etapa="5"] .fx-etapa:nth-of-type(5) {
+  opacity: 1;
+}
+
+/* ---------- fundo que viaja ---------- */
+
+.fx-fundo-ativo body {
+  background: var(--fx-fundo, inherit);
+  color: var(--fx-tinta, inherit);
+  transition: background 0.7s ease, color 0.7s ease;
+}
+
+/* ---------- suavidade geral ---------- */
+
+[data-fx-paralaxe],
+[data-fx-mouse],
+[data-fx-x], [data-fx-y], [data-fx-escala], [data-fx-giro], [data-fx-opacidade] {
+  will-change: transform;
+}
+
+[data-fx-mouse] {
+  transition: transform 0.25s ease-out;
+}
+
+/* ---------- movimento reduzido: tudo visível, nada se mexe ---------- */
+
+.fx-reduzido [data-fx] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+.fx-reduzido [data-fx="palavras"] .fx-palavra {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+.fx-reduzido .fx-palco {
+  position: static;
+  height: auto;
+  overflow: visible;
+}
+.fx-reduzido [data-fx-etapas] .fx-etapa {
+  opacity: 1;
+  position: static !important;
+  grid-area: auto !important; /* etapas sobrepostas viram lista, uma sob a outra */
+  margin: 24px 0;
+}
+.fx-reduzido [data-fx="trilho"] {
+  flex-wrap: wrap;
+  transform: none !important;
 }

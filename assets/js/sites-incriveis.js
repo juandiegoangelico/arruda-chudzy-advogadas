@@ -308,11 +308,15 @@
 
   function atualizarParalaxes() {
     var centroTela = window.innerHeight / 2;
-    paralaxes.forEach(function (p) {
+    var medidas = [];
+    for (var i = 0; i < paralaxes.length; i++) {
+      var p = paralaxes[i];
       var ret = p.el.getBoundingClientRect();
-      var desvio = (ret.top + ret.height / 2 - centroTela) * -p.forca;
-      p.el.style.transform = "translateY(" + desvio.toFixed(1) + "px)";
-    });
+      medidas.push({ el: p.el, desvio: (ret.top + ret.height / 2 - centroTela) * -p.forca });
+    }
+    for (var j = 0; j < medidas.length; j++) {
+      medidas[j].el.style.transform = "translateY(" + medidas[j].desvio.toFixed(1) + "px)";
+    }
   }
 
   /* ---------- 5. Reação ao ponteiro ---------- */
