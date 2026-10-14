@@ -42,8 +42,17 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
   </noscript>
 
-  <!-- Consolidated Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Preload Responsive LCP Hero Image -->
+  <link rel="preload" as="image" href="assets/images/hero-socias-recepcao-mobile.webp" type="image/webp" media="(max-width: 640px)" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/hero-socias-recepcao.webp" type="image/webp" media="(min-width: 641px)" fetchpriority="high">
+
+  <!-- Critical Above-The-Fold Styles (Instant Zero-FCP Paint) -->
+  <style>:root{--color-primary:#65194B;--color-primary-dark:#3F0E2F;--color-primary-deep:#25071B;--color-secondary:#742356;--color-secondary-light:#8E2F6B;--color-accent:#C9A0B8;--color-accent-light:#E8D3DF;--color-accent-gold:#DFB892;--color-text-light:#F8F2F5;--color-support:#D8CCD3;--color-bg-light:#FAF6F8;--color-bg-card:#FFFFFF;--color-text-dark:#20131B;--color-text-muted:#4D3845;--color-border-light:rgba(101,25,75,0.12);--color-border-dark:rgba(201,160,184,0.22);--color-wine-glass:rgba(63,14,47,0.85);--font-serif:'Cormorant Garamond',Georgia,serif;--font-sans:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;--shadow-sm:0 4px 12px rgba(37,7,27,0.05);--shadow-md:0 10px 30px rgba(37,7,27,0.08);--shadow-lg:0 20px 50px rgba(37,7,27,0.14);--shadow-glow:0 0 35px rgba(201,160,184,0.35);--radius-sm:6px;--radius-md:14px;--radius-lg:24px;--radius-full:9999px;--header-height:90px;--header-height-shrunk:70px;--transition-fast:0.25s cubic-bezier(0.25,1,0.5,1);--transition-normal:0.4s cubic-bezier(0.25,1,0.5,1);--transition-slow:0.7s cubic-bezier(0.25,1,0.5,1)}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;font-size:16px;color-scheme:light}body{font-family:var(--font-sans);background-color:var(--color-bg-light);color:var(--color-text-dark);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}img,svg{display:block;max-width:100%;height:auto}a{color:inherit;text-decoration:none;transition:color var(--transition-fast)}button{font-family:inherit;cursor:pointer;border:none;background:none}ul,ol{list-style:none}p{text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto}.skip-link{position:absolute;top:-60px;left:20px;opacity:0;pointer-events:none;background:var(--color-primary);color:#FFFFFF;padding:12px 24px;border-radius:var(--radius-sm);z-index:9999;font-weight:600;transition:top var(--transition-fast),opacity var(--transition-fast)}.skip-link:focus{top:20px;opacity:1;pointer-events:auto;outline:2px solid var(--color-accent-gold)}.container{width:100%;max-width:1240px;margin-left:auto;margin-right:auto;padding-left:24px;padding-right:24px}.section{padding:100px 0;position:relative}.section-dark{background:linear-gradient(135deg,var(--color-primary-deep) 0%,var(--color-primary) 60%,var(--color-secondary) 100%);color:var(--color-text-light)}.section-header{text-align:center;max-width:780px;margin:0 auto 64px auto}.section-tag{display:inline-flex;align-items:center;gap:8px;text-transform:uppercase;font-size:0.82rem;letter-spacing:3px;font-weight:600;color:var(--color-primary);margin-bottom:16px}.section-dark .section-tag{color:var(--color-accent-light)}.section-tag::before,.section-tag::after{content:'';display:inline-block;width:24px;height:1px;background-color:currentColor;opacity:0.6}.section-title{font-family:var(--font-serif);font-size:2.75rem;line-height:1.2;font-weight:600;color:var(--color-primary-dark);letter-spacing:-0.5px;margin-bottom:20px}.section-dark .section-title{color:var(--color-text-light)}.section-subtitle{font-size:1.1rem;color:var(--color-text-muted);font-weight:400}.section-dark .section-subtitle{color:var(--color-support)}.site-header{position:fixed;top:0;left:0;right:0;width:100%;height:var(--header-height);z-index:1000;display:flex;align-items:center;transition:height var(--transition-normal),background-color var(--transition-normal),backdrop-filter var(--transition-normal),box-shadow var(--transition-normal);background-color:rgba(37,7,27,0.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,160,184,0.15)}.site-header.shrunk{height:var(--header-height-shrunk);background-color:rgba(37,7,27,0.94);box-shadow:0 10px 30px rgba(20,3,14,0.4);border-bottom:1px solid rgba(201,160,184,0.25)}.navbar-container{display:flex;align-items:center;justify-content:space-between;width:100%}.brand-logo{display:flex;align-items:center;gap:14px}.brand-logo-img{height:44px;width:auto;aspect-ratio:160 / 46;max-width:200px;object-fit:contain;transition:transform var(--transition-fast);display:block}.brand-logo:hover .brand-logo-img{transform:scale(1.03)}.hero-badge-logo{width:20px;height:20px;border-radius:4px;object-fit:contain;flex-shrink:0}.brand-monogram{width:44px;height:44px;transition:transform var(--transition-fast)}.brand-logo:hover .brand-monogram{transform:scale(1.05)}.brand-text{display:flex;flex-direction:column}.brand-name{font-family:var(--font-serif);font-size:1.35rem;font-weight:600;letter-spacing:2.2px;color:var(--color-text-light);line-height:1.1}.brand-sub{font-size:0.68rem;letter-spacing:3.2px;font-weight:500;color:var(--color-accent-light);text-transform:uppercase;margin-top:2px}.nav-menu{display:flex;align-items:center;gap:32px}.nav-link{font-size:0.92rem;font-weight:500;color:#FFFFFF;position:relative;letter-spacing:0.5px;padding:6px 0}.nav-link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--color-accent);transition:width var(--transition-fast)}.nav-link:hover,.nav-link.active{color:var(--color-text-light)}.nav-link:hover::after,.nav-link.active::after{width:100%}.nav-actions{display:flex;align-items:center;gap:16px}.nav-cta-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--color-secondary) 0%,var(--color-primary) 100%);color:var(--color-text-light);border:1px solid var(--color-accent);padding:10px 22px;border-radius:var(--radius-full);font-size:0.88rem;font-weight:600;letter-spacing:0.6px;transition:all var(--transition-fast);box-shadow:0 4px 15px rgba(116,35,86,0.3)}.nav-cta-btn:hover{background:var(--color-accent);color:var(--color-primary-dark);box-shadow:0 6px 20px rgba(201,160,184,0.4);transform:translateY(-2px)}.menu-toggle{display:none;flex-direction:column;gap:6px;width:32px;height:32px;justify-content:center;align-items:center;z-index:1001}.menu-toggle span{display:block;width:26px;height:2px;background-color:var(--color-text-light);border-radius:2px;transition:all var(--transition-fast)}.menu-toggle.is-active span:nth-child(1){transform:translateY(8px) rotate(45deg)}.menu-toggle.is-active span:nth-child(2){opacity:0}.menu-toggle.is-active span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}.hero-section{position:relative;min-height:100vh;display:flex;align-items:center;padding-top:calc(var(--header-height)+40px);padding-bottom:80px;background:linear-gradient(140deg,#180312 0%,#300A23 45%,#4C1237 80%,#65194B 100%);color:var(--color-text-light);overflow:hidden}.hero-background-effects{position:absolute;inset:0;pointer-events:none;overflow:hidden}.hero-glow-1{position:absolute;top:-10%;right:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(201,160,184,0.18) 0%,transparent 70%);filter:blur(60px)}.hero-glow-2{position:absolute;bottom:-15%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(116,35,86,0.28) 0%,transparent 70%);filter:blur(50px)}.hero-grid{display:grid;grid-template-columns:1.15fr 0.85fr;align-items:center;gap:56px;position:relative;z-index:2}.hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(201,160,184,0.12);border:1px solid rgba(201,160,184,0.3);padding:8px 18px;border-radius:var(--radius-full);font-size:0.82rem;letter-spacing:2px;text-transform:uppercase;color:#FFFFFF;margin-bottom:24px}.hero-badge-dot{width:8px;height:8px;background:var(--color-accent);border-radius:50%;box-shadow:0 0 10px var(--color-accent);animation:pulseDot 2s infinite ease-in-out}.hero-title{font-family:var(--font-serif);font-size:3.5rem;line-height:1.14;font-weight:600;color:var(--color-text-light);letter-spacing:-0.5px;margin-bottom:24px}.hero-title .title-highlight,.hero-title .fx-palavra:nth-of-type(3){color:#E3CAD8;font-style:italic;font-weight:700}.hero-subtitle{font-size:1.18rem;line-height:1.75;color:var(--color-support);margin-bottom:38px;max-width:620px;text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto}.hero-cta-group{display:flex;align-items:center;flex-wrap:wrap;gap:18px;margin-bottom:48px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 34px;border-radius:var(--radius-full);font-size:0.96rem;font-weight:600;letter-spacing:0.5px;transition:all var(--transition-fast)}.btn-primary{background:linear-gradient(135deg,var(--color-accent) 0%,#D8CCD3 100%);color:var(--color-primary-dark);box-shadow:0 8px 25px rgba(201,160,184,0.35)}.btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(201,160,184,0.5);background:#FFFFFF;color:var(--color-primary)}.btn-secondary{background:rgba(255,255,255,0.08);color:var(--color-text-light);border:1px solid rgba(201,160,184,0.4);backdrop-filter:blur(8px)}.btn-secondary:hover{background:rgba(201,160,184,0.2);border-color:var(--color-accent);color:#FFFFFF;transform:translateY(-3px)}.btn-whatsapp{background:#25D366;color:#FFFFFF;box-shadow:0 8px 25px rgba(37,211,102,0.3)}.btn-whatsapp:hover{background:#20BA5A;transform:translateY(-3px);box-shadow:0 12px 30px rgba(37,211,102,0.45)}.hero-stats-row{display:flex;align-items:center;gap:36px;padding-top:28px;border-top:1px solid rgba(201,160,184,0.2)}.hero-stat-item{display:flex;flex-direction:column}.hero-stat-num{font-family:var(--font-serif);font-size:1.7rem;font-weight:600;color:var(--color-accent)}.hero-stat-label{font-size:0.8rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--color-support)}.hero-media-wrapper{position:relative}.hero-media-frame{position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 25px 60px rgba(10,2,7,0.55);border:1px solid rgba(201,160,184,0.3);aspect-ratio:4 / 3}.hero-media-frame picture,.about-main-img picture,.partner-image-wrapper picture,.course-showcase-media picture{display:block;width:100%;height:100%}.hero-media-frame img{width:100%;height:100%;aspect-ratio:4 / 3;object-fit:cover;transition:transform var(--transition-slow)}.hero-media-wrapper:hover .hero-media-frame img{transform:scale(1.03)}.hero-floating-card{position:absolute;bottom:-24px;left:-24px;background:rgba(37,7,27,0.88);backdrop-filter:blur(16px);border:1px solid rgba(201,160,184,0.35);border-radius:var(--radius-md);padding:18px 24px;display:flex;align-items:center;gap:16px;box-shadow:0 15px 35px rgba(15,3,11,0.5)}.hero-floating-icon{width:44px;height:44px;border-radius:50%;background:var(--color-primary);display:flex;align-items:center;justify-content:center;color:var(--color-accent-light);border:1px solid var(--color-accent)}.hero-floating-text h4,.hero-floating-text .hero-floating-title{font-family:var(--font-serif);font-size:1.15rem;color:var(--color-text-light);line-height:1.2}.hero-floating-text p{font-size:0.82rem;color:var(--color-text-light);letter-spacing:0.8px}@media (max-width:1080px){.hero-grid{grid-template-columns:1fr;text-align:center;gap:48px}.hero-subtitle{margin-left:auto;margin-right:auto}.hero-cta-group{justify-content:center}.hero-stats-row{justify-content:center}.hero-media-wrapper{max-width:580px;margin:0 auto}}@media (max-width:768px){:root{--header-height:80px;--header-height-shrunk:65px}.hero-title{font-size:2.2rem}.nav-menu{position:fixed;top:0;right:-100%;width:82%;max-width:380px;height:100vh;background:#25071B;flex-direction:column;justify-content:center;align-items:flex-start;padding:48px 36px;gap:28px;visibility:hidden;pointer-events:none;box-shadow:-15px 0 40px rgba(0,0,0,0.6);transition:right var(--transition-normal),visibility var(--transition-normal);z-index:1000;border-left:1px solid rgba(201,160,184,0.2)}.nav-menu.is-open{right:0;visibility:visible;pointer-events:auto}.menu-toggle{display:flex}.nav-actions{display:none}.hero-floating-card{left:10px;bottom:-15px;padding:12px 18px}}</style>
+
+  <!-- Preload & Asynchronously Load Full Stylesheet (Non-Render-Blocking) -->
+  <link rel="preload" as="style" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
 
   <!-- Schema.org JSON-LD Structured Data for LegalService -->
   <script type="application/ld+json">
@@ -112,7 +121,10 @@
   <header class="site-header" role="banner">
     <div class="container navbar-container">
       <a href="#inicio" class="brand-logo" aria-label="Arruda Chudzy Advogadas - Página Inicial">
-        <img src="assets/images/logo-oficial.png" alt="Arruda Chudzy Advogadas" class="brand-logo-img" width="160" height="46">
+        <picture>
+          <source type="image/webp" srcset="assets/images/logo-oficial.webp">
+          <img src="assets/images/logo-oficial.png" alt="Arruda Chudzy Advogadas" class="brand-logo-img" width="160" height="46">
+        </picture>
       </a>
 
       <nav class="nav-menu" role="navigation" aria-label="Navegação Principal">
@@ -154,20 +166,20 @@
 
       <div class="container hero-grid">
         <div class="hero-content-col">
-          <div class="hero-badge" data-fx="surgir" data-fx-duracao="800">
+          <div class="hero-badge">
             <img src="assets/images/logo-monogram-oficial.png" alt="AC" class="hero-badge-logo" width="20" height="20">
             <span>Arruda Chudzy Advogadas &bull; OAB/SC 12.228</span>
           </div>
 
-          <h1 class="hero-title" data-fx="surgir">
+          <h1 class="hero-title">
             Segurança Jurídica <span class="title-highlight">Estratégica</span> para Profissionais da Saúde e Empresas
           </h1>
 
-          <p class="hero-subtitle" data-fx="surgir" data-fx-atraso="350">
+          <p class="hero-subtitle">
             Atuação especializada em Direito Médico e da Saúde, Contratos e Direito Criminal, oferecendo assessoria preventiva, consultiva e contenciosa pautada pelo rigor técnico, transparência e segurança jurídica.
           </p>
 
-          <div class="hero-cta-group" data-fx="subir" data-fx-atraso="500">
+          <div class="hero-cta-group">
             <a href="https://wa.me/5549999370099" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" aria-label="Fale pelo WhatsApp com o escritório Arruda Chudzy">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.074-2.127-.521-1.625-.675-2.656-2.34-2.736-2.448-.078-.108-.654-.869-.654-1.657 0-.787.413-1.174.558-1.332.144-.158.315-.198.421-.198.106 0 .211.002.304.006.098.004.229-.037.359.274.135.324.461 1.125.501 1.206.04.081.067.176.014.283-.054.108-.081.176-.161.27-.081.095-.17.211-.243.283-.081.081-.165.17-.071.332.095.162.42.34 1.229 1.42.128.114.244.151.343.19.123.048.243.042.335.028.115-.017.359-.147.501-.365.143-.217.143-.404.101-.485-.042-.081-.144-.131-.288-.202z"/></svg>
               <span>Atendimento via WhatsApp</span>
@@ -183,6 +195,7 @@
         <div class="hero-media-wrapper">
           <div class="hero-media-frame" data-fx-paralaxe="0.12">
             <picture>
+              <source media="(max-width: 640px)" type="image/webp" srcset="assets/images/hero-socias-recepcao-mobile.webp">
               <source type="image/webp" srcset="assets/images/hero-socias-recepcao.webp">
               <img src="assets/images/hero-socias-recepcao.jpg" alt="Dra. Bianca Flor Chudzy e Dra. Julia de Arruda Souza no escritório Arruda Chudzy Advogadas" width="640" height="480" fetchpriority="high">
             </picture>
@@ -208,6 +221,7 @@
         <div class="about-image-stack" data-fx="esquerda">
           <div class="about-main-img">
             <picture>
+              <source media="(max-width: 640px)" type="image/webp" srcset="assets/images/sobre-socias-mesa-mobile.webp">
               <source type="image/webp" srcset="assets/images/sobre-socias-mesa.webp">
               <img src="assets/images/sobre-socias-mesa.jpg" alt="Dra. Julia de Arruda Souza e Dra. Bianca Flor Chudzy em atendimento no escritório Arruda Chudzy Advogadas" width="580" height="520" loading="lazy">
             </picture>
@@ -443,6 +457,7 @@
           <article class="course-showcase-card" data-fx="esquerda">
             <div class="course-showcase-media" onclick="openCourseViewer(1)" title="Clique para ampliar e ler a programação completa">
               <picture>
+                <source media="(max-width: 640px)" type="image/webp" srcset="assets/images/curso-1-mobile.webp">
                 <source type="image/webp" srcset="assets/images/curso-1.webp">
                 <img src="assets/images/curso-1.jpg" alt="Cursos e Treinamentos em Direito Médico e da Saúde - Módulo 1" width="800" height="414" loading="lazy">
               </picture>
@@ -468,6 +483,7 @@
           <article class="course-showcase-card" data-fx="direita">
             <div class="course-showcase-media" onclick="openCourseViewer(2)" title="Clique para ampliar e ler a programação completa">
               <picture>
+                <source media="(max-width: 640px)" type="image/webp" srcset="assets/images/curso-2-mobile.webp">
                 <source type="image/webp" srcset="assets/images/curso-2.webp">
                 <img src="assets/images/curso-2.jpg" alt="Cursos e Treinamentos em Direito Médico e da Saúde - Módulo 2" width="800" height="403" loading="lazy">
               </picture>
@@ -587,7 +603,10 @@
         <!-- Coluna 1: Marca & OAB -->
         <div class="footer-brand-col">
           <a href="#inicio" class="brand-logo" style="margin-bottom: 16px;" aria-label="Arruda Chudzy Advogadas - Voltar ao início">
-            <img src="assets/images/logo-oficial.png" alt="Arruda Chudzy Advogadas" class="brand-logo-img" width="180" height="53">
+            <picture>
+              <source type="image/webp" srcset="assets/images/logo-oficial.webp">
+              <img src="assets/images/logo-oficial.png" alt="Arruda Chudzy Advogadas" class="brand-logo-img" width="180" height="53">
+            </picture>
           </a>
           <p class="footer-lead-desc">
             Escritório de advocacia com atuação estratégica voltada à segurança jurídica de profissionais da saúde, empresas e pessoas físicas.
@@ -686,8 +705,9 @@
   <dialog id="eventDetailsModal" class="event-modal">
     <button type="button" class="modal-close-btn" aria-label="Fechar janela de detalhes">&times;</button>
     <picture>
+      <source media="(max-width: 640px)" type="image/webp" srcset="assets/images/hero-socias-recepcao-mobile.webp">
       <source type="image/webp" srcset="assets/images/hero-socias-recepcao.webp">
-      <img src="assets/images/hero-socias-recepcao.jpg" alt="Evento Arruda Chudzy" class="modal-header-image" width="680" height="260">
+      <img src="assets/images/hero-socias-recepcao.jpg" alt="Evento Arruda Chudzy" class="modal-header-image" width="680" height="260" loading="lazy">
     </picture>
     <div class="modal-content-body">
       <div class="modal-category-tag"></div>
@@ -706,8 +726,8 @@
   </dialog>
 
   <!-- Scripts -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/gallery.js"></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/gallery.js" defer></script>
   <script src="assets/js/sites-incriveis.js" defer></script>
 </body>
 </html>

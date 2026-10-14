@@ -105,17 +105,21 @@ p {
   position: absolute;
   top: -60px;
   left: 20px;
+  opacity: 0;
+  pointer-events: none;
   background: var(--color-primary);
-  color: var(--color-text-light);
+  color: #FFFFFF;
   padding: 12px 24px;
   border-radius: var(--radius-sm);
   z-index: 9999;
   font-weight: 600;
-  transition: top var(--transition-fast);
+  transition: top var(--transition-fast), opacity var(--transition-fast);
 }
 .skip-link:focus {
   top: 20px;
-  outline: 2px solid var(--color-accent);
+  opacity: 1;
+  pointer-events: auto;
+  outline: 2px solid var(--color-accent-gold);
 }
 
 /* Layout Utilities */
@@ -2016,13 +2020,17 @@ dialog.event-modal::backdrop {
     align-items: flex-start;
     padding: 48px 36px;
     gap: 28px;
+    visibility: hidden;
+    pointer-events: none;
     box-shadow: -15px 0 40px rgba(0, 0, 0, 0.6);
-    transition: right var(--transition-normal);
+    transition: right var(--transition-normal), visibility var(--transition-normal);
     z-index: 1000;
     border-left: 1px solid rgba(201, 160, 184, 0.2);
   }
   .nav-menu.is-open {
     right: 0;
+    visibility: visible;
+    pointer-events: auto;
   }
   .menu-toggle {
     display: flex;
