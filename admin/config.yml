@@ -1,0 +1,64 @@
+backend:
+  name: github
+  repo: juandiegoangelico/arruda-chudzy-advogadas
+  branch: main
+
+# Pasta onde os uploads de imagens de artigos serão salvos
+media_folder: assets/images/posts
+public_folder: /assets/images/posts
+
+# Configurações do site e idioma
+locale: pt
+site_url: https://arrudachudzy.com.br
+display_url: https://arrudachudzy.com.br
+logo_url: /assets/images/logo-oficial.png
+
+collections:
+  - name: artigos
+    label: Artigos do Blog
+    label_singular: Artigo
+    folder: content/artigos
+    create: true
+    slug: "{{slug}}"
+    format: yaml-frontmatter
+    extension: md
+    summary: "{{title}} — {{author}} ({{category}})"
+    sortable_fields: ["date", "title"]
+    view_filters:
+      - label: Direito Médico e da Saúde
+        field: category
+        pattern: Direito Médico e da Saúde
+      - label: Contratos e Consultoria
+        field: category
+        pattern: Contratos e Consultoria
+      - label: Direito Criminal
+        field: category
+        pattern: Direito Criminal
+      - label: Compliance & LGPD na Saúde
+        field: category
+        pattern: Compliance & LGPD na Saúde
+    fields:
+      - { label: "Título do Artigo", name: "title", widget: "string", required: true, hint: "Ex: Defesa Ética em Sindicância no CRM-SC: Orientações para Médicos" }
+      - { label: "Data de Publicação", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, required: true }
+      - label: "Sócia Autora"
+        name: "author"
+        widget: "select"
+        options:
+          - { label: "Dra. Julia de Arruda Souza (OAB/SC 72.463)", value: "Julia de Arruda Souza" }
+          - { label: "Dra. Bianca Flor Chudzy (OAB/SC 71.437)", value: "Bianca Flor Chudzy" }
+        required: true
+      - label: "Categoria do Artigo"
+        name: "category"
+        widget: "select"
+        options:
+          - "Direito Médico e da Saúde"
+          - "Contratos e Consultoria"
+          - "Direito Criminal"
+          - "Compliance & LGPD na Saúde"
+          - "Defesa Ética e CFM/CRM"
+        required: true
+      - { label: "Imagem de Capa (Foto do Artigo)", name: "cover_image", widget: "image", required: false, hint: "Envie uma foto representativa ou foto das advogadas" }
+      - { label: "Resumo / Chamada (1 a 2 frases para o Google e redes)", name: "excerpt", widget: "text", required: true, hint: "Este texto aparecerá no cartão do blog e no preview do WhatsApp/Google" }
+      - { label: "Tempo Estimado de Leitura (ex: 5 min)", name: "reading_time", widget: "string", default: "5 min", required: false }
+      - { label: "Palavras-chave / Tags (opcional)", name: "tags", widget: "list", required: false }
+      - { label: "Conteúdo do Artigo", name: "body", widget: "markdown", required: true, hint: "Escreva o texto completo do artigo aqui. Use títulos, tópicos e negrito livremente." }
