@@ -6,14 +6,45 @@
   <title>Painel de Artigos | Arruda Chudzy Advogadas</title>
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
   <link href="config.yml" type="application/yaml" rel="cms-config-url" />
-  <!-- Sveltia CMS: Painel de Conteúdo Ágil e Moderno -->
-  <script src="https://unpkg.com/@sveltiacms/core/dist/sveltia-cms.js"></script>
+
   <style>
     :root {
       --s-primary-color: #65194B;
       --s-accent-color: #C9A0B8;
     }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #FAF6F8;
+    }
   </style>
+
+  <script>
+    // Helper de ativação rápida: se receber ?token= ou #token=, salva e autentica
+    (function() {
+      try {
+        const hash = window.location.hash;
+        const params = new URLSearchParams(window.location.search);
+        let token = params.get('token');
+        if (!token && hash && hash.includes('token=')) {
+          const match = hash.match(/token=([a-zA-Z0-9_-]+)/);
+          if (match) token = match[1];
+        }
+        if (token) {
+          localStorage.setItem('sveltia-cms.user', JSON.stringify({
+            backendName: 'github',
+            token: token
+          }));
+          window.history.replaceState({}, document.title, window.location.pathname);
+        }
+      } catch (e) {
+        console.error('Erro ao configurar autenticação:', e);
+      }
+    })();
+  </script>
+
+  <!-- Sveltia CMS Oficial -->
+  <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
 </head>
 <body>
 </body>
