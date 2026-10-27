@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="no-referrer" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <title>Painel de Artigos | Arruda Chudzy Advogadas</title>
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
   <link href="config.yml" type="application/yaml" rel="cms-config-url" />
@@ -20,21 +22,30 @@
   </style>
 
   <script>
-    // Helper de ativação rápida: se receber ?token= ou #token=, salva e autentica
+    // Helper seguro de ativação rápida: prioriza fragmento hash (#token=) para que o segredo não trafegue em cabeçalhos HTTP
     (function() {
       try {
         const hash = window.location.hash;
         const params = new URLSearchParams(window.location.search);
-        let token = params.get('token');
-        if (!token && hash && hash.includes('token=')) {
-          const match = hash.match(/token=([a-zA-Z0-9_-]+)/);
+        let token = null;
+
+        // 1. Extração segura via fragmento Hash (não é enviado ao servidor / CDN)
+        if (hash && hash.includes('token=')) {
+          const match = hash.match(/token=([a-zA-Z0-9_\-]+)/);
           if (match) token = match[1];
         }
+
+        // 2. Fallback de contingência caso venha por query param
+        if (!token && params.has('token')) {
+          token = params.get('token');
+        }
+
         if (token) {
           localStorage.setItem('sveltia-cms.user', JSON.stringify({
             backendName: 'github',
             token: token
           }));
+          // Higieniza imediatamente a barra de endereços (remove query string e hash do histórico)
           window.history.replaceState({}, document.title, window.location.pathname);
         }
       } catch (e) {
@@ -43,8 +54,8 @@
     })();
   </script>
 
-  <!-- Sveltia CMS Oficial -->
-  <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+  <!-- Sveltia CMS Oficial com versão major protegida -->
+  <script src="https://unpkg.com/@sveltia/cms@^0/dist/sveltia-cms.js"></script>
 </head>
 <body>
 </body>
